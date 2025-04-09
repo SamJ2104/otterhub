@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+    <title>Otters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Pinyon+Script&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+ 
+ 
+            
+        body.dark-mode {
+            filter: invert(1) hue-rotate(180deg);
+            color: black;
+            background-color: black;
+        }
+ 
+        
+ 
+        body.dark-mode .slide img {
+            filter: invert(1) hue-rotate(180deg);
+        }
+ 
+ 
+ 
+ 
+ 
+ 
+        
+        h1{
+            font-family: "honk", system-ui; 
+            font-size: 40px; /* too smol */
+        }
+ 
+        body {
+	    cursor: url('https://i.ibb.co/6KmRk6j/cursor.png'), auto;
+            font-family: "Space Mono", monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .head {
+            display: flex;
+            justify-content: space-between; /* this flipping menu button istg */
+            align-items: center;
+            padding: 20px;
+            background: white;
+            border-bottom: 2px solid #000000; /* hr's r 4 losers */
+        }
+ 
+        /* fancy menu :)  VVV */
+ 
+        .menu {
+            font-family: "Space Mono", monospace;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-content {
+            font-family: "Space Mono", monospace;
+            display: none;
+            position: absolute;
+            background: #ffffff;
+            border: 1px solid #000000;
+            right: 0;
+            min-width: 100px;
+        }
+        .menu:hover .menu-content {
+            font-family: "Space Mono", monospace;
+            display: block;
+        }
+        .menu-content a {
+            font-family: "Space Mono", monospace; /* why wont this menu go monospace giushlsdfgh */
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+ 
+        /* fend of the fancy menu */
+ 
+        .amazingquotefromcameron {
+            font-family: "Pinyon Script", cursive; 
+ 
+            font-weight: 900;
+ 
+            margin: 20px;
+            font-style: italic;
+            border: 1px dashed #000000;
+            padding: 10px;
+        }
+ 
+ 
+        .slider {
+            display: flex;
+ 
+            width: 500%;
+ 
+            animation: slide 330s linear infinite;
+        }
+        .slider-container:hover .slider {
+            animation-play-state: paused; /* ooooo */
+        }
+        .slide {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000000;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+ 
+            height: 100%;
+        }
+        .lil-thingy {
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            padding: 5px;
+            transition: bottom 0.3s; /* lil bouncy slide up */
+        }
+        .slide:hover .lil-thingy {
+            bottom: 0; /* i forgor */
+        }
+ 
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+ 
+ 
+        .body-text {
+            padding: 20px;
+            border: 1px solid #000000;
+            margin: 20px;
+        }
+ 
+ 
+ 
+    </style>
+</head>
+<body>
+    <div class="head">
+        <a href="index.html"><h1>OtterBay</h1></a>
+        <div class="menu">
+ 
+            <!-- fancy menu that i definitely didnt steal from google -->
+            <button style="font-family: Space Mono, monospace;">Menu</button> <!-- i resorted to inline css -->
+            <div class="menu-content">
+                <a href="#" onclick="darkmode()">Dark</a>
+ 
+                <a href="gallery.html">Gallery</a>
+ 
+                <a href="testimonial.html">Testimonials</a>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="amazingquotefromcameron">“i like otters” - Cameron Martin &nbsp; &nbsp; ⭐⭐⭐⭐⭐ &nbsp; &nbsp; "idk its pretty good ig" - the new york times</div>
+    <div class="slider-container">
+        <div class="slider">
+ 
+            <!-- ignore this lol -->
+ 
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+	    <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Sea Otter"><div class="lil-thingy">Sea Otter</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://greatergood.org/hubfs/20240224_090914%20copy.jpg" alt="Clawed Dude"><div class="lil-thingy">Clawed Dude</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://www.treehugger.com/thmb/iayN8kOoAdb190hXrlG9KdZEb8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg" alt="Smiley dude"><div class="lil-thingy">Smiley Guy</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/11/06/11/Meet%20Pup%20681,%20the%20orphaned%20southern%20sea%20otter%20in%20Chicago.jpg" alt="Otter 4"><div class="lil-thingy">Smol Lil Man</div></div></a>
+            <a href="https://en.wikipedia.org/wiki/Otter" target="_blank"><div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg" alt=""><div class="lil-thingy">bro is NOT an otter</div></div></a>
+           
+        </div>
+    </div>
+    <div class="body-text">
+        
+        
+        <p><i>Otters are carnivorous mammals in the subfamily Lutrinae. The 13 extant otter species are all semiaquatic, aquatic, or marine. Lutrinae is a branch of the Mustelidae family, which includes weasels, badgers, mink, and wolverines, among other animals.</i> <br> - Wikipedia</p>
+    
+        <p><i>otters are pretty awesome and i like them becasue they are cute</i> <br>- me</p>
+    </div>
+    <br><br><br>made by sam 
+    <script>
+        function darkmode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

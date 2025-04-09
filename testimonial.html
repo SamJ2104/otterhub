@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+    <title>Otters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Pinyon+Script&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+ 
+ 	.dotted{
+            border: 1px dashed #000000;
+            padding: 10px;
+	}
+
+            
+        body.dark-mode {
+            filter: invert(1) hue-rotate(180deg);
+            color: black;
+            background-color: black;
+        }
+ 
+        
+ 
+        body.dark-mode img {
+            filter: invert(1) hue-rotate(180deg);
+        }
+ 
+ 
+ 
+ 
+ 
+ 
+        
+        h1{
+            font-family: "honk", system-ui; 
+            font-size: 40px; /* too smol */
+        }
+ 
+        body {
+            font-family: "Space Mono", monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .head {
+            display: flex;
+            justify-content: space-between; /* this flipping menu button istg */
+            align-items: center;
+            padding: 20px;
+            background: white;
+            border-bottom: 2px solid #000000; /* hr's r 4 losers */
+        }
+ 
+        /* fancy menu :)  VVV */
+ 
+        .menu {
+            font-family: "Space Mono", monospace;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-content {
+            font-family: "Space Mono", monospace;
+            display: none;
+            position: absolute;
+            background: #ffffff;
+            border: 1px solid #000000;
+            right: 0;
+            min-width: 100px;
+        }
+        .menu:hover .menu-content {
+            font-family: "Space Mono", monospace;
+            display: block;
+        }
+        .menu-content a {
+            font-family: "Space Mono", monospace; /* why wont this menu go monospace giushlsdfgh */
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+ 
+        /* fend of the fancy menu */
+ 
+        .amazingquotefromcameron {
+            font-family: "Pinyon Script", cursive; 
+ 
+            font-weight: 900;
+ 
+            margin: 20px;
+            font-style: italic;
+            border: 1px dashed #000000;
+            padding: 10px;
+        }
+ 
+ 
+        .slider {
+            display: flex;
+ 
+            width: 500%;
+ 
+            animation: slide 330s linear infinite;
+        }
+        .slider-container:hover .slider {
+            animation-play-state: paused; /* ooooo */
+        }
+        .slide {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000000;
+            overflow: hidden;
+        }
+        img {
+	    border-radius: 20px;
+  	    border-style: solid;
+	    border-color: #3b3636;
+	    border-width: 3px; 
+            width: 100%;
+ 
+            height: 100%;
+        }
+        .lil-thingy {
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            padding: 5px;
+            transition: bottom 0.3s; /* lil bouncy slide up */
+        }
+        .slide:hover .lil-thingy {
+            bottom: 0; /* i forgor */
+        }
+ 
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+ 
+ 
+        .body-text {
+            padding: 20px;
+            border: 1px solid #000000;
+            margin: 20px;
+        }
+ 
+ 
+ 
+    </style>
+</head>
+<body>
+    <div class="head">
+        <a href="index.html"><h1>OtterBay</h1></a>
+        <div class="menu">
+ 
+            <!-- fancy menu that i definitely didnt steal from google -->
+            <button style="font-family: Space Mono, monospace;">Menu</button> <!-- i resorted to inline css -->
+            <div class="menu-content">
+                <a href="#" onclick="darkmode()">Dark</a>
+ 
+                <a href="gallery.html">Gallery</a>
+ 
+                <a href="testimonial.html">Testimonials</a>
+            </div>
+        </div>
+    </div>
+ 
+<div class="amazingquotefromcameron">“i like otters” - Cameron Martin &nbsp; &nbsp; ⭐⭐⭐⭐⭐ &nbsp; &nbsp; "idk its pretty good ig" - the new york times</div>
+    
+
+<div>
+<center>Trusted By:</center>
+<img style="width:100px;height:100px;" src="https://media.licdn.com/dms/image/v2/C560BAQEp-f9Ptu2yVQ/company-logo_200_200/company-logo_200_200/0/1631319717018?e=2147483647&v=beta&t=w2DX068rzhiJAPKfaAWwzhwzqlQSYIlbXC3m4V_zJlI"></img>
+<img style="width:100px;height:100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png"></img>
+<img style="width:100px;height:100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCdRLhiJUSuw5VbkSOrnoLNGMSINLz6FLgRw&s"></img>
+<img style="width:100px;height:100px;" src="cameron.jpg"></img>
+<img style="width:100px;height:100px;" src="sam_edited.png"></img>
+</div>
+
+
+
+
+<div class="body-text">
+        
+        
+        <p><i>I wish I has OtterHub when I was your age</i> <br> - Cameron Martin</p>
+    
+        <p><i>i like it but i made it so i cant say anytging</i> <br>- me</p>
+
+        <p><i>tf (the frick) is this</i> <br>- nyt</p>
+
+        <p><i>we don't even sell otters man</i> <br>- pets at home</p>
+    </div>
+    <br><br><br>made by sam 
+    <script>
+        function darkmode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
